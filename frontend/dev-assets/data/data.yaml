@@ -1,0 +1,8 @@
+---
+# http://yaml.org/type/map.html -----------------------------------------------#
+itineraries:
+  - id: 0
+    name: San Jose Del Cabo - History, Wine, Food
+    map_image: '/assets/images/maps/mexico.png'
+    place: San Jose del Cabo, Baja California Sur, Mexico
+

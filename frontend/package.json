@@ -1,0 +1,34 @@
+{
+    "name": "sights",
+    "version": "0.1.1",
+    "description": "Averon Lock Website repository",
+    "scripts": {
+        "start": "npm i && gulp default",
+        "deploy": "gulp deploy",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/moobile/gordons-guide.git"
+    },
+    "dependencies": {
+        "gulp": "*",
+        "gulp-util": "*",
+        "gulp-sourcemaps": "*",
+        "jshint": "*"
+    },
+    "devDependencies": {
+        "deep-extend-stream": "3.0.0",
+        "gulp-concat": "2.6.0",
+        "gulp-connect": "5.0.0",
+        "gulp-jshint": "^2.0.0",
+        "gulp-less": "3.3.0",
+        "gulp-plumber": "1.1.0",
+        "gulp-pug": "3.3.0",
+        "gulp-util": "3.0.7",
+        "gulp-uglify": "2.0.0",
+        "jshint-stylish": "2.2.1",
+        "semver-regex": "1.0.0",
+        "vinyl-yaml-data": "2.0.1"
+    }
+}

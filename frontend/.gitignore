@@ -1,0 +1,19 @@
+/vendor/
+vendor
+# Dependency directory
+node_modules
+
+#generate files
+public/assets/js/all.js
+public/assets/css/main.css
+dev-assets/js/templates.js
+
+#program files
+.DS_Store
+*.tmp
+*.pyc
+
+yarn.lock
+conf.json
+.vscode
+.eslintrc

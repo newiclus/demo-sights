@@ -1,0 +1,120 @@
+.transition(@prop) {
+    -ms-transition: @prop 0.3s ease;
+        transition: @prop 0.3s ease;
+}
+
+
+
+html {
+    font-size: 100%;
+	/* To smooth any scrolling behavior */
+	-webkit-overflow-scrolling: touch;
+}
+
+body {
+	background-color: #fff;
+    font-family: @font-lato;
+    font-size: 1em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    a:hover,
+    a:focus {
+        text-decoration: none;
+        outline: 0 none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+	form {
+		margin: 0;
+	}
+
+    img {
+        border: 0 none;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    button {
+        outline: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+/* Absolute layers */
+.absolute { 
+    position: absolute; 
+}
+
+.absolute-BottomLeft {
+    .absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+.absolute-BottomRight {
+    .absolute;
+    bottom: 0;
+    right: 0; 
+}
+
+.absolute-TopLeft {
+    .absolute;
+    left: 0;
+    top: 0; 
+}
+
+.absolute-TopRight {
+    .absolute;
+    right: 0;
+    top: 0; 
+}
+
+/* Limit inside layer */
+.limiter {
+    margin: 0 auto;
+    position: relative;
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+.invisible { 
+    visibility: hidden;
+}
+.visible { 
+    visibility: visible; 
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Float side */
+.side-left { float: left; }
+.side-right { float: right; }
+
+/* Clear both */
+.clear { clear: both; }
+
+
+/* Reset ul, ol styles and children li */
+.unstyled,
+.unstyled-list {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.unstyled-list > li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+}

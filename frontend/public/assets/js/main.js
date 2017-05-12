@@ -1,0 +1,1 @@
+!function(){"use strict";var t={filter:document.getElementById("filter")};t.toggleBlockFilter=function(){var e=t.filter.querySelectorAll(".filter__toggle");Array.from(e).forEach(function(t){t.addEventListener("click",function(t){})})},t.filter}();

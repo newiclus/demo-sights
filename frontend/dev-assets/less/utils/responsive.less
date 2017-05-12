@@ -1,0 +1,589 @@
+.make-responsive-columns(@lg, @md, @sm, @xs) {
+  .make-xs-column(@xs);
+  .make-sm-column(@sm);
+  .make-md-column(@md);
+  .make-lg-column(@lg);
+}
+
+.make-responsive-columns-offset(@lg, @md, @sm, @xs) {
+  .make-xs-column-offset(@xs);
+  .make-sm-column-offset(@sm);
+  .make-md-column-offset(@md);
+  .make-lg-column-offset(@lg);
+}
+
+@margin-default: @grid-gutter-width / 2; // should be 15px;
+
+.margin-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-top-small() {
+  margin-top: @margin-default / 2;
+  @media (min-width: @screen-sm-min) {
+    margin-top: @margin-default;
+  }
+}
+
+.margin-bottom-small() {
+  margin-bottom: @margin-default / 2;
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: @margin-default;
+  }
+}
+
+.mobile-sticky-footer {
+    .hidden-lg;
+      .hidden-md;
+        position: fixed;
+        left: 0;
+        
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        width: 100%;
+        z-index: 1;
+   -webkit-transition: all 500ms ease-out 1s;
+      -moz-transition: all 500ms ease-out 1s;
+      -o-transition: all 500ms ease-out 1s;
+      transition: all 500ms ease-out 1s;
+      bottom: 0px;
+      opacity: 1;
+    &.visible {
+      bottom: 0px;
+      opacity: 1;
+    }    
+}
+
+.margin-top-bottom-small() {
+  .margin-top-small;
+  .margin-bottom-small;
+}
+.set-max-width-container{
+  max-width: 1050px;
+}
+.margin-top-medium() {
+  margin-top: @margin-default;
+  @media (min-width: @screen-sm-min) {
+    margin-top: @margin-default * 1.5;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-top: @margin-default * 2;
+  }
+}
+
+.margin-bottom-medium() {
+  margin-bottom: @margin-default;
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: @margin-default * 1.5;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-bottom: @margin-default * 2;
+  }
+}
+
+.margin-top-bottom-medium() {
+  .margin-top-medium;
+  .margin-bottom-medium;
+}
+
+.margin-top-large() {
+  margin-top: @margin-default * 2;
+  @media (min-width: @screen-md-min) {
+    margin-top: @margin-default * 4;
+  }
+}
+
+.margin-bottom-large() {
+  margin-bottom: @margin-default * 2;
+  @media (min-width: @screen-md-min) {
+    margin-bottom: @margin-default * 4;
+  }
+}
+
+.margin-top-bottom-large() {
+  .margin-top-large;
+  .margin-bottom-large;
+}
+
+.padding-top-small() {
+  padding-top: @margin-default / 2;
+  @media (min-width: @screen-sm-min) {
+    padding-top: @margin-default;
+  }
+}
+
+.padding-bottom-small() {
+  padding-bottom: @margin-default / 2;
+  @media (min-width: @screen-sm-min) {
+    padding-bottom: @margin-default;
+  }
+}
+
+.padding-top-bottom-small() {
+  .padding-top-small;
+  .padding-bottom-small;
+}
+
+.padding-top-medium() {
+  padding-top: @margin-default;
+  @media (min-width: @screen-sm-min) {
+    padding-top: @margin-default * 1.5;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-top: @margin-default * 2;
+  }
+}
+
+.padding-bottom-medium() {
+  padding-bottom: @margin-default;
+  @media (min-width: @screen-sm-min) {
+    padding-bottom: @margin-default * 1.5;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-bottom: @margin-default * 2;
+  }
+}
+
+.padding-top-bottom-medium() {
+  .padding-top-medium;
+  .padding-bottom-medium;
+}
+
+.padding-top-large() {
+  padding-top: @margin-default * 2;
+  @media (min-width: @screen-md-min) {
+    padding-top: @margin-default * 4;
+  }
+}
+
+.padding-bottom-large() {
+  padding-bottom: @margin-default * 2;
+  @media (min-width: @screen-md-min) {
+    padding-bottom: @margin-default * 4;
+  }
+}
+
+.padding-top-bottom-large() {
+  .padding-top-large;
+  .padding-bottom-large;
+}
+
+.font-text-align-xs-center (){
+  @media (max-width: @screen-xs-max) { .text-center; }
+}
+.font-text-align-xs-left (){
+  @media (max-width: @screen-xs-max) { .text-left; }
+}
+.font-text-align-xs-right (){
+  @media (max-width: @screen-xs-max) { .text-right; }
+}
+
+.font-text-align-sm-center (){
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { .text-center; }
+}
+.font-text-align-sm-left (){
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { .text-left; }
+}
+.font-text-align-sm-right (){
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { .text-right; }
+}
+
+.font-text-align-md-center (){
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { .text-center; }
+}
+.font-text-align-md-left (){
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { .text-left; }
+}
+.font-text-align-md-right (){
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { .text-right; }
+}
+
+.font-text-align-lg-center (){
+  @media (min-width: @screen-lg-min) { .text-center; }
+}
+.font-text-align-lg-left (){
+  @media (min-width: @screen-lg-min) { .text-left; }
+}
+.font-text-align-lg-right (){
+  @media (min-width: @screen-lg-min) { .text-right; }
+}
+
+.box-shadow-md(){
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);}
+}
+.box-shadow-lg(){
+  @media (min-width: @screen-lg-min) { 
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);}
+}
+.box-shadow-sm(){
+  @media (min-width: @screen-sm-min)  and (max-width: @screen-sm-max) { 
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);}
+}
+.box-shadow-xs(){
+  @media (max-width: @screen-xs-max) { 
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);
+    box-shadow: 0px 1px 6px 0px rgba(51,51,51,0.6);}
+}
+
+.make-responsive-background-image (@url-lg;@url-md;@url-sm;@url-xs){
+  @media (max-width: @screen-xs-max) { background-image: @url-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { background-image: @url-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { background-image: @url-md; }
+  @media (min-width: @screen-lg-min) { background-image: @url-lg; }
+}
+.make-responsive-background-color (@color-lg;@color-md;@color-sm;@color-xs){
+  @media (max-width: @screen-xs-max) { background-color: @color-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { background-color: @color-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { background-color: @color-md; }
+  @media (min-width: @screen-lg-min) { background-color: @color-lg; }
+}
+.make-responsive-background-position (@position-lg;@position-md;@position-sm;@position-xs){
+  @media (max-width: @screen-xs-max) { background-position: @position-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { background-position: @position-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { background-position: @position-md; }
+  @media (min-width: @screen-lg-min) { background-position: @position-lg; }
+}
+
+.make-responsive-font-size(@size-lg;@size-md;@size-sm;@size-xs) {
+  @media (max-width: @screen-xs-max) { font-size: @size-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { font-size: @size-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: @size-md; }
+  @media (min-width: @screen-lg-min) { font-size: @size-lg; }
+}
+.make-responsive-font-size-special(@size-xs) {
+  @media (max-width: @screen-xs-max) { font-size: @size-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { font-size: @size-xs + 2px; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-size: @size-xs + 4px; }
+  @media (min-width: @screen-lg-min) { font-size: @size-xs+ 6px; }
+}
+.make-responsive-font-family(@size-lg;@size-md;@size-sm;@size-xs) {
+  @media (max-width: @screen-xs-max) { font-family: @size-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { font-family: @size-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { font-family: @size-md; }
+  @media (min-width: @screen-lg-min) { font-family: @size-lg; }
+}
+.make-responsive-line-height-special(@size-xs) {
+  @media (max-width: @screen-xs-max) { line-height: @size-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { line-height: @size-xs + 2px; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { line-height: @size-xs + 4px; }
+  @media (min-width: @screen-lg-min) { line-height: @size-xs+ 6px; }
+}
+.make-responsive-line-height(@size-lg;@size-md;@size-sm;@size-xs) {
+  @media (max-width: @screen-xs-max) { line-height: @size-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { line-height: @size-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { line-height: @size-md; }
+  @media (min-width: @screen-lg-min) { line-height: @size-lg; }
+}
+
+.make-responsive-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { width: @md; }
+  @media (min-width: @screen-lg-min) { width: @lg; }
+
+}
+.make-responsive-height(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { height: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { height: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { height: @md; }
+  @media (min-width: @screen-lg-min) { height: @lg; }
+}
+.make-responsive-max-height(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { max-height: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { max-height: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { max-height: @md; }
+  @media (min-width: @screen-lg-min) { max-height: @lg; }
+}
+
+.make-responsive-margin(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin: @md; }
+  @media (min-width: @screen-lg-min) { margin: @lg; }
+}
+
+// margin top-bottom
+.make-responsive-margin-top-bottom(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin-top: @xs;margin-bottom: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin-top: @sm;margin-bottom: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin-top: @md;margin-bottom: @md; }
+  @media (min-width: @screen-lg-min) { margin-top: @lg;margin-bottom: @lg; }
+}
+.make-responsive-margin-top(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin-top: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin-top: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin-top: @md; }
+  @media (min-width: @screen-lg-min) { margin-top: @lg; }
+}
+.make-responsive-margin-bottom(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin-bottom: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin-bottom: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin-bottom: @md; }
+  @media (min-width: @screen-lg-min) { margin-bottom: @lg; }
+}
+
+// margin left-right
+.make-responsive-margin-left-right(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin-left: @xs;margin-right: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin-left: @sm;margin-right: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin-left: @md;margin-right: @md; }
+  @media (min-width: @screen-lg-min) { margin-left: @lg;margin-right: @lg; }
+}
+.make-responsive-margin-left(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin-left: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin-left: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin-left: @md; }
+  @media (min-width: @screen-lg-min) { margin-left: @lg; }
+}
+.make-responsive-margin-right(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { margin-right: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { margin-right: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { margin-right: @md; }
+  @media (min-width: @screen-lg-min) { margin-right: @lg; }
+}
+
+// padding top-bottom
+.make-responsive-padding-top-bottom(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding-top: @xs; padding-bottom: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding-top: @sm; padding-bottom: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-top: @md; padding-bottom: @md; }
+  @media (min-width: @screen-lg-min) { padding-top: @lg; padding-bottom: @lg; }
+}
+.make-responsive-padding-top(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding-top: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding-top: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-top: @md; }
+  @media (min-width: @screen-lg-min) { padding-top: @lg; }
+}
+.make-responsive-padding-bottom(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding-bottom: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding-bottom: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-bottom: @md; }
+  @media (min-width: @screen-lg-min) { padding-bottom: @lg; }
+}
+
+.make-responsive-padding(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding: @md; }
+  @media (min-width: @screen-lg-min) { padding: @lg; }
+}
+
+// padding left-right
+.make-responsive-padding-left-right(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding-left: @xs;padding-right: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding-left: @sm;padding-right: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {padding-left: @md;padding-right: @md; }
+  @media (min-width: @screen-lg-min) { padding-left: @lg;padding-right: @lg; }
+}
+.make-responsive-padding-left(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding-left: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding-left: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-left: @md; }
+  @media (min-width: @screen-lg-min) { padding-left: @lg; }
+}
+.make-responsive-padding-right(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { padding-right: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { padding-right: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { padding-right: @md; }
+  @media (min-width: @screen-lg-min) { padding-right: @lg; }
+}
+
+.make-responsive-top(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { top: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { top: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { top: @md; }
+  @media (min-width: @screen-lg-min) { top: @lg; }
+}
+
+.make-responsive-right(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { right: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { right: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { right: @md; }
+  @media (min-width: @screen-lg-min) { right: @lg; }
+}
+.make-responsive-translateX(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { -webkit-transform: translateX(@xs);
+                                       -ms-transform: translateX(@xs);
+                                       transform: translateX(@xs); }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { -webkit-transform: translateX(@sm);
+                                                                        -ms-transform: translateX(@sm);
+                                                                        transform: translateX(@sm);}
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { -webkit-transform: translateX(@md);
+                                                                       -ms-transform: translateX(@md);
+                                                                       transform: translateX(@md); }
+  @media (min-width: @screen-lg-min) { -webkit-transform: translateX(@lg);
+                                       -ms-transform: translateX(@lg);
+                                       transform: translateX(@lg); }
+}
+
+.make-responsive-letter-spacing(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { letter-spacing: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { letter-spacing: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { letter-spacing: @md; }
+  @media (min-width: @screen-lg-min) { letter-spacing: @lg; }
+}
+.make-responsive-left(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { left: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { left: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { left: @md; }
+  @media (min-width: @screen-lg-min) { left: @lg; }
+}
+.make-responsive-bottom(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { bottom: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { bottom: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { bottom: @md; }
+  @media (min-width: @screen-lg-min) { bottom: @lg; }
+}
+.make-responsive-opacity(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { opacity: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { opacity: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { opacity: @md; }
+  @media (min-width: @screen-lg-min) { opacity: @lg; }
+}
+.make-responsive-fill(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { fill: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { fill: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { fill: @md; }
+  @media (min-width: @screen-lg-min) { fill: @lg; }
+}
+.make-responsive-border(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { border: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { border: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { border: @md; }
+  @media (min-width: @screen-lg-min) { border: @lg; }
+}
+.make-responsive-border-bottom-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { border-bottom-width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { border-bottom-width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { border-bottom-width: @md; }
+  @media (min-width: @screen-lg-min) { border-bottom-width: @lg; }
+}
+.make-responsive-border-right-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { border-right-width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { border-right-width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { border-right-width: @md; }
+  @media (min-width: @screen-lg-min) { border-right-width: @lg; }
+}
+.make-responsive-border-left-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { border-left-width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { border-left-width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { border-left-width: @md; }
+  @media (min-width: @screen-lg-min) { border-left-width: @lg; }
+}
+.make-responsive-min-height(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { min-height: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { min-height: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { min-height: @md; }
+  @media (min-width: @screen-lg-min) { min-height: @lg; }
+}
+.make-responsive-min-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { min-width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { min-width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { min-width: @md; }
+  @media (min-width: @screen-lg-min) { min-width: @lg; }
+}
+.make-responsive-max-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { max-width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { max-width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { max-width: @md; }
+  @media (min-width: @screen-lg-min) { max-width: @lg; }
+}
+.make-responsive-text-transform(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { text-transform: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { text-transform: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { text-transform: @md; }
+  @media (min-width: @screen-lg-min) { text-transform: @lg; }
+}
+.make-responsive-float(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { float: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { float: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { float: @md; }
+  @media (min-width: @screen-lg-min) { float: @lg; }
+}
+.make-responsive-position(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { position: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { position: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { position: @md; }
+  @media (min-width: @screen-lg-min) { position: @lg; }
+}
+.make-responsive-border-width(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { border-width: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { border-width: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { border-width: @md; }
+  @media (min-width: @screen-lg-min) { border-width: @lg; }
+}
+.make-responsive-color (@color-lg;@color-md;@color-sm;@color-xs){
+  @media (max-width: @screen-xs-max) { color: @color-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { color: @color-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { color: @color-md; }
+  @media (min-width: @screen-lg-min) { color: @color-lg; }
+}
+.make-responsive-border-color (@color-lg;@color-md;@color-sm;@color-xs){
+  @media (max-width: @screen-xs-max) { border-color: @color-xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { border-color: @color-sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { border-color: @color-md; }
+  @media (min-width: @screen-lg-min) { border-color: @color-lg; }
+}
+.make-responsive-overflow(@lg;@md;@sm;@xs) {
+  @media (max-width: @screen-xs-max) { overflow: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  { overflow: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { overflow: @md; }
+  @media (min-width: @screen-lg-min) { overflow: @lg; }
+}
+
+.make-responsive-border-radius(@lg;@md;@sm;@xs){
+  @media (max-width: @screen-xs-max) { 
+    -webkit-border-radius: @xs;
+    -moz-border-radius: @xs;
+    border-radius: @xs; }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){ 
+    -webkit-border-radius: @sm;
+    -moz-border-radius: @sm;
+    border-radius: @sm; }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+    -webkit-border-radius: @md;
+    -moz-border-radius: @md;
+    border-radius: @md; }
+  @media (min-width: @screen-lg-min) { 
+    -webkit-border-radius: @lg;
+    -moz-border-radius: @lg;
+    border-radius: @lg; }
+}
+
+
+.make-responsive-navbar-vertical-align(@element-height){
+  @media (max-width: @screen-xs-max) {   
+    margin-top: ((@header-height-xs - @element-height) / 2);
+    margin-bottom: ((@header-height-xs - @element-height) / 2); 
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  {   
+    margin-top: ((@header-height-sm - @element-height) / 2);
+    margin-bottom: ((@header-height-sm - @element-height) / 2); 
+   }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {   
+    margin-top: ((@header-height - @element-height) / 2);
+    margin-bottom: ((@header-height - @element-height) / 2); 
+   }
+  @media (min-width: @screen-lg-min) {   
+    margin-top: ((@header-height - @element-height) / 2);
+    margin-bottom: ((@header-height - @element-height) / 2); 
+   }
+}
+
+.visible-xs-portrait {
+  @media (max-width: @screen-xs-max) and (min-height: 321px) {
+    .responsive-visibility();
+  }
+}

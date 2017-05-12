@@ -1,0 +1,60 @@
+doctype html
+html(lang="es-ES")
+    head
+        meta(charset='utf-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= "Sights"
+        meta(name='description', content="")
+
+        // Facebook meta tags
+        meta(property='og:title', content="")
+        meta(property='og:description', content="")
+        meta(property='og:type', content="website")
+        meta(property='og:url', content="")
+        meta(property='og:image', content="")
+
+        //Favicon
+        //link(rel='shortcut icon', type='image/x-icon', href!="")
+
+        //Canonical
+        link(rel="canonical", href="http://localhost")
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900")
+        link(rel="stylesheet", href="/assets/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/assets/css/main.css")
+
+        |<!--[if lte IE 9]>
+        |<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        |<![endif]-->
+
+        script(type="application/ld+json").
+            {
+              "@context": "http://www.schema.org",
+              "@type":    "WebSite",
+              "name":     "Sights",
+              "alternateName": "Website Name Alternate",
+              "url":      "http://localhost"
+            }
+        
+        script.
+            var $buoop = {vs:{i:10,f:-4,o:-4,s:7,c:-4},c:4};
+            function $buo_f(){
+             var e = document.createElement("script");
+             e.src = "//browser-update.org/update.min.js";
+             document.body.appendChild(e);
+            };
+            try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+            catch(e){window.attachEvent("onload", $buo_f)}
+
+
+    body
+        include ../includes/_header
+        
+        block content
+
+        include ../includes/_footer
+        
+        // Compilado de Plugins
+        script(src="/assets/js/vendor/vendor_all.js")
+        // Compilado de main.js
+        script(src="/assets/js/main.js")
