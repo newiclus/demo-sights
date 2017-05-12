@@ -25,3 +25,15 @@ whyItems:
     image: '/assets/images/why/why_3.jpg'
     type: A
 
+teacher:
+  - id: 0
+    name: Multi-Classroom Dashboard
+    image: '/assets/images/icons/pc-monitor.svg'
+
+  - id: 1
+    name: At-home Progress Tracking
+    image: '/assets/images/icons/phone.svg'
+
+  - id: 2
+    name:  Powerful Testing Features
+    image: '/assets/images/icons/check.svg'

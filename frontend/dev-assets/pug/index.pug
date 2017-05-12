@@ -3,6 +3,7 @@ extends extends/base
 block content
 
     include mixins/why-item
+    include mixins/feature
     
     section#body
         #banner-head
@@ -20,24 +21,8 @@ block content
                         figure.image
                             img(src="/assets/images/devices-web-2x.png", alt="devices")
         
-        
-        #sub-navigation
-            .limiter
-                ul.unstyled-list
-                    li
-                        a.active(href="#watch", class="active") Watch
-                    li
-                        a(href="#why") Why Sights
-                    li
-                        a(href="#") Teachers
-                    li
-                        a(href="#") Parents
-                    li
-                        a(href="#") PRICING + DETAILS
-                    li
-                        a(href="#") Blog
-                
-                a(href="#").btn-suscribe Subscribe
+
+        include includes/_subnavigation
         
         #watch
             figure.watch__image(style="background-image: url(/assets/images/teen-girl-learning.jpg)")
@@ -45,6 +30,7 @@ block content
                 button.watch__play
                 h2.watch__text Watch Sights in Action
         
+
         #why
             .limiter
                 h2.why__title  Why Sights?
@@ -58,6 +44,24 @@ block content
                         br
                         span.arrow
                             i.fa.fa-3x.fa-angle-down(aria-hidden="true")
+        
+
+        #teachers.forPeople
+            figure.forPeople__bg(style="background-image: url(/assets/images/laptop_on_desktop.jpg)")
+            
+            .forPeople__content
+                h2.forPeople__title. 
+                    <strong>Sights</strong> <br> for teachers
+                
+                ul.forPeople__features.row.unstyled
+                    each feature in data.teacher
+                        +feature(feature)
+
+                .forPeople__actions
+                    a.btn(href="#") Start your free trial
+
+                        
+                    
 
                     
                     

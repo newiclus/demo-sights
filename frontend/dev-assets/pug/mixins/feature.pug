@@ -1,0 +1,10 @@
+mixin feature(feature)
+    li.feature.col-xs-12.col-md-4
+        figure.feature__image
+            img(src=feature.image, alt="icon feature")
+        p.feature__name=feature.name
+        a(href="#") 
+            ='More'
+            br
+            span
+                i.fa.fa-plus(aria-hidden="true")

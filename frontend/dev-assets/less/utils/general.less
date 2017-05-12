@@ -1,4 +1,4 @@
-.transition(@prop) {
+.transition(@prop, @duration: 0.3s) {
     -ms-transition: @prop 0.3s ease;
         transition: @prop 0.3s ease;
 }
@@ -18,6 +18,10 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    a {
+        .transition(all);
+    }
 
     a:hover,
     a:focus {
@@ -71,6 +75,13 @@ body {
     .absolute;
     right: 0;
     top: 0; 
+}
+
+.bg {
+    .absolute-TopLeft;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Limit inside layer */
