@@ -15,18 +15,40 @@
         li {
             padding-bottom: 20px;
             a {
-                color: #4a4a4a;
-                font-size: 0.9em;
+                color: #979797;
+                display: inline-block;
+                font-size: 0.8em;
                 &:hover {
                     text-decoration: underline;
                 }
             }
+            svg {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &.icon {
+                padding: 0 20px;
+            }
         }
     }
 
-    .footer_copy {
+    .footer__links {
+        padding-left: 30px;
+        a {
+            margin-right: 15px;
+        }
+    }
+
+    .footer__logo {
+        padding: 0 40px 0 15px; 
+        img {
+            height: 30px;
+        }
+    }
+
+    .footer__copy {
         color: #979797;
-        font-size: 0.85em;
+        font-size: 0.8em;
         text-align: center;
 
         cite {

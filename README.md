@@ -1,4 +1,4 @@
-Gordons Guide
+Sights
 ===========================
 
 Pre-Requisites
