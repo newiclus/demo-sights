@@ -25,6 +25,8 @@ whyItems:
     image: '/assets/images/why/why_3.jpg'
     type: A
 
+
+# http://yaml.org/type/map.html -----------------------------------------------#
 teacher:
   - id: 0
     name: Multi-Classroom Dashboard
@@ -37,3 +39,34 @@ teacher:
   - id: 2
     name:  Powerful Testing Features
     image: '/assets/images/icons/check.svg'
+
+
+# http://yaml.org/type/map.html -----------------------------------------------#
+operations:
+  - id: 0
+    name: Student Data Tracking
+    description:
+      Tests taken both in class and at home are automatically tracked in the Teacher’s 
+      Dashboard, providing at-a-glance progress monitoring.
+    image: '/assets/images/icons/chart_lines.svg'
+
+  - id: 1
+    name: Incremental Rehearsal
+    description:
+      Students are tested using a mix of new words interspersed with previous-level words, 
+      a method proven to get students learning more total words.
+    image: '/assets/images/icons/chart_bar.svg'
+
+  - id: 2
+    name: List<br>Manager
+    description:
+      Teachers can choose from Fry and Dolch lists or create custom lists. Lists are then 
+      assigned to classes and individual students.
+    image: '/assets/images/icons/list.svg'
+
+  - id: 3
+    name: Parent - Teacher connection
+    description:
+       Never miss a beat&#58; teachers see at-home practice test results; parents get their child’s 
+       newest words to study; students learn + retain sight words 3x faster.
+    image: '/assets/images/icons/cross_arrows.svg'

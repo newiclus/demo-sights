@@ -1,0 +1,9 @@
+mixin operation(data)
+    article.operation.col-xs-12.col-sm-6.col-md-3
+        figure.operation__image
+            img(src=data.image, alt="Operation image")
+        
+        h3.operation__name!=data.name
+        
+        p.operation__description!=data.description
+
