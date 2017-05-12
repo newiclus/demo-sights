@@ -1,6 +1,8 @@
 extends extends/base
 
 block content
+
+    include mixins/why-item
     
     section#body
         #banner-head
@@ -25,7 +27,7 @@ block content
                     li
                         a.active(href="#watch", class="active") Watch
                     li
-                        a(href="#") Why Sights
+                        a(href="#why") Why Sights
                     li
                         a(href="#") Teachers
                     li
@@ -42,4 +44,21 @@ block content
             .watch__actions
                 button.watch__play
                 h2.watch__text Watch Sights in Action
+        
+        #why
+            .limiter
+                h2.why__title  Why Sights?
+                .row
+                    each item in data.whyItems
+                        +item(item)
+                
+                .why__actions
+                    a(href="#") 
+                        ='Tell me more'
+                        br
+                        span.arrow
+                            i.fa.fa-3x.fa-angle-down(aria-hidden="true")
+
+                    
+                    
 

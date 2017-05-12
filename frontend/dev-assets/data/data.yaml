@@ -1,8 +1,27 @@
 ---
 # http://yaml.org/type/map.html -----------------------------------------------#
-itineraries:
+whyItems:
   - id: 0
-    name: San Jose Del Cabo - History, Wine, Food
-    map_image: '/assets/images/maps/mexico.png'
-    place: San Jose del Cabo, Baja California Sur, Mexico
+    name: PARENT - CONNECTED
+    description:
+      Seamlessly synced. Parents receive curriculum updates for their young reader; 
+      teachers receive all at-home study progress.
+    image: '/assets/images/why/why_1.jpg'
+    type: A
+
+  - id: 1
+    name: 1 PLACE FOR ALL SIGHT WORD CURRICULUM
+    description:
+      Seamlessly synced. Parents receive curriculum updates for their young reader; 
+      teachers receive all at-home study progress.
+    image: '/assets/images/why/why_2.jpg'
+    type: B
+
+  - id: 2
+    name: STUDENTS READ 3X FASTER
+    description:
+      When teachers and parents use Sights, children learn and retain sight words 
+      3X faster than with traditional paper flashcards.
+    image: '/assets/images/why/why_3.jpg'
+    type: A
 
