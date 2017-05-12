@@ -3,5 +3,34 @@ extends extends/base
 block content
     
     section#body
-        .limiter
-            .container-fluid
+        #banner-head
+            .limiter
+                .row
+                    .col-xs-12.col-md-6
+                        h1.title Sights <small>by Educasic</small>
+                        h2.subtitle.
+                            The world’s 1<sup>st</sup> classroom connected sight word platform.
+                        p.description.
+                            1 in 4 children in the U.S. grow up  without learning to read. 
+                            That’s not okay with us.
+                            
+                    .col-xs-12.col-md-6
+                        figure.image
+                            img(src="/assets/images/devices-web-2x.png", alt="devices")
+        
+        
+        #sub-navigation
+            .limiter
+                ul.unstyled-list
+                    li
+                        a.active(href="#", class="active") Watch
+                    li
+                        a(href="#") Why Sights
+                    li
+                        a(href="#") Teachers
+                    li
+                        a(href="#") Parents
+                    li
+                        a(href="#") PRICING + DETAILS
+                    li
+                        a(href="#") Blog
