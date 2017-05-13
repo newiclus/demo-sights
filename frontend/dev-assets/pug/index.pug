@@ -72,15 +72,59 @@ block content
             
             .forPeople__content
                 h2.forPeople__title. 
-                    <strong>Sights</strong> <br> for teachers
+                    <strong>Sights</strong> <br> for parents
                 
                 ul.forPeople__features.row.unstyled
                     each feature in data.teacher
                         +feature(feature)
 
                 .forPeople__actions
-                    a.btn(href="#") Start your free trial
+                    a.btn(href="#").
+                        <i class="fa fa-apple" aria-hidden="true"></i> 
+                        Apple Store
+                    a.btn(href="#").
+                        <i class="fa fa-android" aria-hidden="true"></i> 
+                        Google Play
 
+        #details.details
+            .limiter
+                h2.details__title Pricing + Details
+                ul.tabs.unstyled-list
+                    li.anchor
+                        a.active(href="tab_1", data-px="0%") Princing
+                    li.anchor
+                        a(href="tab_2", data-px="33%") Student Data
+                    li.anchor
+                        a(href="tab_3", data-px="75%") Low Income
+                    li.line
+                        span.indicator
+                .tab-content
+                    article#tab_1.tab.active
+                        p.
+                            Teachers get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
+                            During the trial you have access to everything Sights offers: adding students, taking tests, 
+                            moving students up a level, setting up your List Manager, and more. The following count as 
+                            one action each: moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
+
+                        p.
+                            Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
+                            and your subscription will terminate and billing will stop. When you are ready to start a new 
+                            school year with new classes, simply create a new classroom and set up a new billing cycle. 
+                    
+                    article#tab_2.tab
+                        p.
+                            TB2 get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
+                            During the trial you have access to everything Sights offers: adding students, taking tests, 
+                            moving students up a level, setting up your List Manager, and more. The following count as 
+                            one action each: moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
+
+                        p.
+                            Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
+                            and your subscription will terminate and billing will stop. When you are ready to start a new 
+                            school year with new classes, simply create a new classroom and set up a new billing cycle. 
+
+
+           
 
                         
                     
