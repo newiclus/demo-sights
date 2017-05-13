@@ -1,0 +1,13 @@
+mixin post(data)
+    .post.col-xs-12.col-md-4
+        .post__content
+            figure.post__image
+                img(src=data.image, alt="image post")
+            h2.post__title
+                =data.title
+            p.post__description
+                !=data.description
+
+        .post__action
+            a.btn.read-more(href="#").
+                Read more

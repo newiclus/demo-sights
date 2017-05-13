@@ -116,3 +116,29 @@ tabs:
         school year with new classes, simply create a new classroom and set up a new billing cycle.
       <p>
 
+
+# http://yaml.org/type/map.html -----------------------------------------------#
+posts:
+  - id: 0
+    title:
+      13 spooky Halloween stories for little ghouls and witches everywhere
+    description:
+      Celebrate the last days of October with some seriously spooky Halloween 
+      stories.
+    image: '/assets/images/post/post_1.jpg'
+
+  - id: 1
+    title:
+      13 spooky Halloween stories for little ghouls and witches everywhere
+    description:
+      Celebrate the last days of October with some seriously spooky Halloween 
+      stories.
+    image: '/assets/images/post/post_1.jpg'
+
+  - id: 2
+    title:
+      13 spooky Halloween stories for little ghouls and witches everywhere
+    description:
+      Celebrate the last days of October with some seriously spooky Halloween 
+      stories.
+    image: '/assets/images/post/post_1.jpg'

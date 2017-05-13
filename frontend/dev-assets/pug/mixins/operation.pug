@@ -3,7 +3,9 @@ mixin operation(data)
         figure.operation__image
             img(src=data.image, alt="Operation image")
         
-        h3.operation__name!=data.name
+        h3.operation__name
+            !=data.name
         
-        p.operation__description!=data.description
+        p.operation__description
+            !=data.description
 

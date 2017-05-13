@@ -6,6 +6,7 @@ block content
     include mixins/feature
     include mixins/operation
     include mixins/tab-details
+    include mixins/post
     
     section#body
         #banner-head
@@ -103,4 +104,9 @@ block content
                     each tab in data.tabs
                         +tab-details(tab)
                     
+        #blog
+            .limiter
+                .row
+                    each post in data.posts
+                        +post(post)
                 

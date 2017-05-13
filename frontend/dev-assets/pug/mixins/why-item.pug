@@ -3,15 +3,16 @@ mixin item(item)
         .why__item(data-type=item.type)
 
             if item.type == 'A'
-
                 figure.item__image
                     img(src=item.image, alt="why image")
-                h3.item__name=item.name
-                p.item__description=item.description
+                h3.item__name
+                    =item.name
+                p.item__description
+                    =item.description
 
             else
-
-                h3.item__name=item.name
+                h3.item__name
+                    =item.name
                 figure.item__image
                     img(src=item.image, alt="why image")
                 
