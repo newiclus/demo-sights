@@ -5,6 +5,7 @@ block content
     include mixins/why-item
     include mixins/feature
     include mixins/operation
+    include mixins/tab-details
     
     section#body
         #banner-head
@@ -99,36 +100,7 @@ block content
                     li.line
                         span.indicator
                 .tab-content
-                    article#tab_1.tab.active
-                        p.
-                            Teachers get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
-                            During the trial you have access to everything Sights offers: adding students, taking tests, 
-                            moving students up a level, setting up your List Manager, and more. The following count as 
-                            one action each: moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
-
-                        p.
-                            Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
-                            and your subscription will terminate and billing will stop. When you are ready to start a new 
-                            school year with new classes, simply create a new classroom and set up a new billing cycle. 
+                    each tab in data.tabs
+                        +tab-details(tab)
                     
-                    article#tab_2.tab
-                        p.
-                            TB2 get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
-                            During the trial you have access to everything Sights offers: adding students, taking tests, 
-                            moving students up a level, setting up your List Manager, and more. The following count as 
-                            one action each: moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
-
-                        p.
-                            Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
-                            and your subscription will terminate and billing will stop. When you are ready to start a new 
-                            school year with new classes, simply create a new classroom and set up a new billing cycle. 
-
-
-           
-
-                        
-                    
-
-                    
-                    
-
+                

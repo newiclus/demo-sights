@@ -17,7 +17,6 @@
             
         
         var moveIndicator = function(anchor) {
-
             var ind_width = anchor.clientWidth,
                 posX      = anchor.getAttribute('data-px');
                 

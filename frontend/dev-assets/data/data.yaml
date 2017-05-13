@@ -70,3 +70,49 @@ operations:
        Never miss a beat&#58; teachers see at-home practice test results; parents get their child’s 
        newest words to study; students learn + retain sight words 3x faster.
     image: '/assets/images/icons/cross_arrows.svg'
+
+
+# http://yaml.org/type/map.html -----------------------------------------------#
+tabs:
+  - id: 1
+    description:
+      <p>
+        Teachers get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
+        During the trial you have access to everything Sights offers&#58; adding students, taking tests, 
+        moving students up a level, setting up your List Manager, and more. The following count as 
+        one action each&#58; moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
+      </p>
+      <p>
+        Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
+        and your subscription will terminate and billing will stop. When you are ready to start a new 
+        school year with new classes, simply create a new classroom and set up a new billing cycle.
+      <p>
+
+  - id: 2
+    description:
+      <p>
+        <strong>TAB 2</strong> get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
+        During the trial you have access to everything Sights offers&#58; adding students, taking tests, 
+        moving students up a level, setting up your List Manager, and more. The following count as 
+        one action each&#58; moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
+      </p>
+      <p>
+        Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
+        and your subscription will terminate and billing will stop. When you are ready to start a new 
+        school year with new classes, simply create a new classroom and set up a new billing cycle.
+      <p>
+
+  - id: 3
+    description:
+      <p>
+        <strong>TAB 3</strong> get a FREE 10-Action Trial to try Sights risk-free before subscribing for $8/mo. 
+        During the trial you have access to everything Sights offers&#58; adding students, taking tests, 
+        moving students up a level, setting up your List Manager, and more. The following count as 
+        one action each&#58; moving a student UP or DOWN a level, taking a test (Dashboard or Parent App).
+      </p>
+      <p>
+        Once subscribed, just archive your Sights classroom when your sight word curriculum is finished, 
+        and your subscription will terminate and billing will stop. When you are ready to start a new 
+        school year with new classes, simply create a new classroom and set up a new billing cycle.
+      <p>
+

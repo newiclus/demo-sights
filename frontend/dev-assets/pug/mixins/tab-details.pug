@@ -1,0 +1,7 @@
+mixin tab-details(data)
+    if data.id == 1
+        article.tab.active(id="tab_"+data.id)
+            !=data.description
+    else
+        article.tab(id="tab_"+data.id)
+            !=data.description
