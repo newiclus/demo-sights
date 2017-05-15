@@ -7,6 +7,7 @@ block content
     include mixins/operation
     include mixins/tab-details
     include mixins/post
+    include mixins/faq
     
     section#body
         #banner-head
@@ -109,4 +110,36 @@ block content
                 .row
                     each post in data.posts
                         +post(post)
-                
+        
+        include includes/_need-to-read
+
+        aside#help-faq
+            .limiter
+                h2.help__title.
+                    HELPFUL FAQs
+
+                each faq in data.faqs
+                    +faq(faq)
+
+                .help__actions
+                    a.btn.see-more.
+                        see all faqs
+        
+        #other-links
+            .limiter
+                .row
+                    .col-xs-12.col-sm-6.col-md-3
+                        figure.image
+                            img(src="/assets/images/learn_1.jpg", alt="image learn")
+
+                    .col-xs-12.col-sm-6.col-md-3
+                        figure.image
+                            img(src="/assets/images/learn_1.jpg", alt="image learn")
+
+                    .col-xs-12.col-sm-6.col-md-3
+                        figure.image
+                            img(src="/assets/images/learn_1.jpg", alt="image learn")
+                            
+                    .col-xs-12.col-sm-6.col-md-3
+                        figure.image
+                            img(src="/assets/images/learn_1.jpg", alt="image learn")

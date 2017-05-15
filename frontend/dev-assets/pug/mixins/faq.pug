@@ -1,0 +1,11 @@
+mixin faq(data)
+    dl.help__block
+        dt.help__question
+            =data.question
+
+        button.help__toggle(data-expand="false")
+            i.fa.fa-plus(aria-hidden="true")
+            i.fa.fa-remove(aria-hidden="true")
+
+        dd.help__answer(data-expand="false")
+            .respond!=data.answer

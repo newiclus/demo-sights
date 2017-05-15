@@ -129,16 +129,48 @@ posts:
 
   - id: 1
     title:
-      13 spooky Halloween stories for little ghouls and witches everywhere
+      7 fun Thanksgiving activities for the kids
     description:
-      Celebrate the last days of October with some seriously spooky Halloween 
-      stories.
-    image: '/assets/images/post/post_1.jpg'
+      From crafting turkey decorations to full-blown living room theatre, inject 
+      a little extra fun into your Thanksgiving!
+    image: '/assets/images/post/post_2.jpg'
 
   - id: 2
     title:
-      13 spooky Halloween stories for little ghouls and witches everywhere
+      What it takes to launch an app
     description:
-      Celebrate the last days of October with some seriously spooky Halloween 
-      stories.
-    image: '/assets/images/post/post_1.jpg'
+      Part 2 of our interview series with Educasic’s CEO and resident Wonder Woman, 
+      Melissa Murphy
+    image: '/assets/images/post/post_3.jpg'
+
+
+# http://yaml.org/type/map.html -----------------------------------------------#
+faqs:
+  - id: 0
+    question: What is Sights?
+    answer:
+      To access your Sights Dashboard for Teachers, visit 
+      <a href="#">www.getsights.com/dashboard</a>.<br>
+      You can log in from any device with Internet access.
+
+  - id: 1
+    question: How does Sights work?
+    answer:
+      To access your Sights Dashboard for Teachers, visit 
+      <a href="#">www.getsights.com/dashboard</a>.<br>
+      You can log in from any device with Internet access.
+
+  - id: 2
+    question: Where do I log in to my Sights Dashboard for Teachers?
+    answer:
+      To access your Sights Dashboard for Teachers, visit 
+      <a href="#">www.getsights.com/dashboard</a>.<br>
+      You can log in from any device with Internet access.
+
+  - id: 3
+    question: Where do I log in to my Sights App for Parents? (Parents)
+    answer:
+      To access your Sights Dashboard for Teachers, visit 
+      <a href="#">www.getsights.com/dashboard</a>.<br>
+      You can log in from any device with Internet access.
+

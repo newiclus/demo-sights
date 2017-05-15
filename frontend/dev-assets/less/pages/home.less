@@ -170,7 +170,7 @@
 
 .forPeople {
     background-color: rgba(0,0,0,0.3);
-    height: 550px;
+    min-height: 550px;
     position: relative;
 
     &__bg {
@@ -197,6 +197,7 @@
     }
     &__actions {
         padding-top: 40px;
+        padding-bottom: 30px;
         .btn {
             background-color: #0D9DC1;
             color: #FFF;
@@ -348,5 +349,176 @@
 }
 
 .post {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    &__content {
+        background-color: #FFF;
+        margin: 0 auto;
+        max-width: 350px;
+        min-height: 510px;
+    }
+    &__image {
+        margin-bottom: 45px;
+    }
+    &__title {
+        color: #000000;
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 25px;
+        padding: 0 32px;
+    }
+    &__description {
+        color: #000000;
+        font-size: 1.125em;
+        font-weight: 300;
+        padding: 0 32px 20px;
+    }
+    &__action {
+        margin-top: 20px;
+        text-align: center;
+        .read-more {
+            background-color: #D7D7D7;
+            color: #FFF;
+            font-size: 0.8em;
+            font-weight: 900;
+            width: 165px;
+            height: 35px;
+            letter-spacing: 1px;
+            line-height: 2.6;
+            padding: 0 15px;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #AAA;
+            }
+        }
+    }
+}
+
+#need-to-read {
+    padding: 65px 0 10px;
+    h2 {
+        color: @grey-brown;
+        font-size: 1.5em;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        margin: 0 0 35px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    p {
+        color: #777;
+        font-size: 0.825em;
+        font-weight: 300;
+        line-height: 2.14;
+        margin: 0 auto 60px;
+        max-width: 560px;
+        text-align: center;
+    }
+
+    .row.list-images {
+        figure {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+#help-faq {
+    border-top: 1px solid #979797;
+    padding: 55px 0 45px;
+    .limiter {
+        max-width: 750px;
+    }
+    .help {
+        &__title {
+            color: @grey-brown;
+            font-size: 1.5em;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            margin-bottom: 50px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &__block {
+            position: relative;
+            margin-bottom: 0;
+        }
+        &__question {
+            color: @grey-brown;
+            border-bottom: solid 0.5px #979797;
+            font-size: 0.9em;
+            font-weight: bold;
+            line-height: 3.29;
+            letter-spacing: 0.3px;
+        }
+        &__toggle {
+            &:extend(.absolute-TopRight);
+            background-color: transparent;
+            color: #fbc02d;
+            font-size: 1.1em;
+            font-weight: 300;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            text-align: center;
+            top: 10px;
+
+            &[data-expand="true"] {
+                .fa-remove {
+                    display: inline-block;
+                }
+                .fa-plus {
+                    display: none;
+                }
+            }
+
+            .fa-remove {
+                display: none;
+            }
+            
+        }
+        &__answer {
+            height: 0;
+            overflow: hidden;
+            .transition(height);
+    
+            &[data-expand="true"] {
+                height: auto;
+            }
+
+            .respond {
+                color: @grey-brown;
+                font-size: 0.9em;
+                font-weight: 300;
+                letter-spacing: 0.3px;
+                padding: 40px 5px;
+            }
+        }
+        &__actions {
+            padding-top: 30px;
+            text-align: center;
+            .see-more {
+                background-color: #D7D7D7;
+                color: #FFF;
+                font-size: 0.8em;
+                font-weight: 900;
+                width: 165px;
+                height: 35px;
+                letter-spacing: 1px;
+                line-height: 2.6;
+                padding: 0 15px;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: #AAA;
+                }
+            }
+        }
+    }
+}
+
+#other-links {
+    background-color: #ffd56b;
+    padding: 45px 0;
+    text-align: center;
+    .limiter {
+        max-width: 920px;
+    }
 }

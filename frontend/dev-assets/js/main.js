@@ -2,7 +2,7 @@
     "use strict";
 
     var app = {
-        filter: document.getElementById("filter"),
+        help: document.getElementById("help-faq"),
         details: document.getElementById("details")
     };
 
@@ -54,19 +54,31 @@
     /**
      * Show/hide a filter block
      */
-    app.toggleBlockFilter = function () {
-        var toggleButtons = app.filter.querySelectorAll(".filter__toggle");
+    app.toggleBlockFaq = function () {
+        var toggleButtons = app.help.querySelectorAll(".help__toggle");
 
         Array.from(toggleButtons).forEach(function(button) {
             button.addEventListener('click', function(event) {
+
+                var self = this,
+                    block = self.nextElementSibling,
+                    isExpand = block.getAttribute('data-expand');
+                
+                if (isExpand == "true") {
+                    self.setAttribute('data-expand', false);
+                    block.setAttribute('data-expand', false);
+                } else {
+                    self.setAttribute('data-expand', true);                    
+                    block.setAttribute('data-expand', true);
+                }
                 
             });
         });
     };
 
 
-    if ( app.filter ) {
-        //app.toggleBlockFilter();
+    if ( app.help ) {
+        app.toggleBlockFaq();
     }
 
     /**
