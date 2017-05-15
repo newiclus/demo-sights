@@ -1,6 +1,7 @@
 #navigation {
 	float: right;
 	margin-left: 50px;
+	position: relative;
 	vertical-align: middle;
 
 	li {
@@ -16,6 +17,18 @@
 				color: #000;
 			}
 		}
+	}
+
+	#close-menu {
+		&:extend(.absolute-TopRight);
+		background-color: transparent;
+		color: #FFF;
+		font-size: 2em;
+		width: 40px;
+		height: 35px;
+		line-height: 1;
+		right: 14px;
+    	top: 16px;
 	}
 }
 

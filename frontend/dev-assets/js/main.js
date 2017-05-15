@@ -3,7 +3,10 @@
 
     var app = {
         help: document.getElementById("help-faq"),
-        details: document.getElementById("details")
+        details: document.getElementById("details"),
+        mainMenu: document.getElementById("navigation"),
+        btnOpenMenu: document.getElementById("open-menu"),
+        btnCloseMenu: document.getElementById("close-menu")
     };
 
     /**
@@ -67,7 +70,6 @@
                     isExpand = block.getAttribute('data-expand');
                     
                 var answerHeight = block.querySelector('.respond').offsetHeight;
-                console.log(answerHeight);
                 
                 if (isExpand == "true") {
                     self.setAttribute('data-expand', false);
@@ -97,6 +99,17 @@
     */
     if ( app.details ) {
         app.makeTabs('.details');
+    }
+
+
+    /**
+    * Open/Close Menu mobile
+    */
+    app.btnOpenMenu.onclick = function(event) {
+        app.mainMenu.classList.add('show');
+    }
+    app.btnCloseMenu.onclick = function(event) {
+        app.mainMenu.classList.remove('show');
     }
     
 })();
