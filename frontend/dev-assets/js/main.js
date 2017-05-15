@@ -51,9 +51,11 @@
         });
     };
 
+
     /**
-     * Show/hide a filter block
-     */
+    * @function toggleBlockFaq
+    * Show/hide a Help-Faq block
+    */
     app.toggleBlockFaq = function () {
         var toggleButtons = app.help.querySelectorAll(".help__toggle");
 
@@ -63,13 +65,19 @@
                 var self = this,
                     block = self.nextElementSibling,
                     isExpand = block.getAttribute('data-expand');
+                    
+                var answerHeight = block.querySelector('.respond').offsetHeight;
+                console.log(answerHeight);
                 
                 if (isExpand == "true") {
                     self.setAttribute('data-expand', false);
                     block.setAttribute('data-expand', false);
+                    block.style.height = '0';
+
                 } else {
                     self.setAttribute('data-expand', true);                    
                     block.setAttribute('data-expand', true);
+                    block.style.height = answerHeight+'px';
                 }
                 
             });
@@ -77,13 +85,16 @@
     };
 
 
+    /**
+    * Create accordeon for Home view
+    */
     if ( app.help ) {
         app.toggleBlockFaq();
     }
 
     /**
-     * Create tabs for Home view
-     */
+    * Create tabs for Home view
+    */
     if ( app.details ) {
         app.makeTabs('.details');
     }
